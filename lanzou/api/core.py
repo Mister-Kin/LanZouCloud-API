@@ -841,6 +841,7 @@ class LanZouCloud(object):
             uploaded_handler(file_id, is_file=True)  # 对已经上传的文件再进一步处理
 
         if need_delete:
+            file.close()
             os.remove(file_path)
 
         file.close()
